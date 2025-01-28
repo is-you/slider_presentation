@@ -6,8 +6,6 @@ function initSlider() {
         simulateTouch: false,
     });
 
-    swiper.slideTo(2);
-
     slider_el.addEventListener('click', (e) => {
         const target = e.target;
         if (!target.classList.contains('js-slide-to')) return;
