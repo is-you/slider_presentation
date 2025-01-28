@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+{% from "component/head/head.njk" import head as head %}
+
+{{ head() }}
+
+<body>
+
+<div class="content">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide" data-slider-index="0">
+                <div class="slide__content">
+                    <button class="btn btn--start js-slide-to" data-slide-to="1">Начало презентации</button>
+                </div>
+            </div>
+            <div class="swiper-slide" data-slider-index="1" data-slider-type="timer" data-slide-to="2">
+                <div class="slide__content">
+                    <img class="img img--full_screen" src="/img/img0.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide" data-slider-index="2">
+                <div class="slide__content">
+                    <img class="img img--aside" src="/img/img1-a.jpg" alt="">
+                    <div class="slide__img_wrapper">
+                        <button class="btn btn--tap js-slide-to" style="top: 200px" data-slide-to="3"></button>
+                        <button class="btn btn--tap js-slide-to" style="top: 280px" data-slide-to="4"></button>
+                        <img class="img" src="/img/img1.jpg" alt="">
+                    </div>
+                    <img class="img img--aside" src="/img/img1-b.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide" data-slider-index="3">
+                <div class="slide__content">
+                    <button class="btn btn--back js-slide-to" data-slide-to="2"></button>
+                    <img class="img img--full_screen" src="/img/tap1.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide" data-slider-index="4" data-slider-type="timer" data-slide-to="5">
+                <div class="slide__content">
+                    <img class="img img--full_screen" src="/img/tap2.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide" data-slider-index="5">
+                <div class="slide__content">
+                    <button class="btn btn--back js-slide-to" data-slide-to="4"></button>
+                    <button class="btn btn--tap js-slide-to" style="top: 200px" data-slide-to="6"></button>
+                    <img class="img img--full_screen" src="/img/tap2-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide" data-slider-index="6">
+                <div class="slide__content">
+                    <button class="btn btn--back js-slide-to" data-slide-to="5"></button>
+                    <button class="btn btn--tap js-slide-to" style="top: 200px" data-slide-to="7"></button>
+                    <img class="img img--full_screen" src="/img/tap2-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide" data-slider-index="7">
+                <div class="slide__content">
+                    <button class="btn btn--back js-slide-to" data-slide-to="6"></button>
+                    <button class="btn btn--tap js-slide-to" style="top: 200px" data-slide-to="8"></button>
+                    <button class="btn btn--tap js-slide-to" style="top: 280px" data-slide-to="9"></button>
+                    <img class="img img--full_screen" src="/img/tap2-3a.jpg" alt="">
+                    <img class="img img--full_screen" src="/img/tap2-3.jpg" alt="">
+                    <img class="img img--full_screen" src="/img/tap2-3b.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide" data-slider-index="8">
+                <div class="slide__content">
+                    <img class="img img--full_screen" src="/img/tap3.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide" data-slider-index="9">
+                <div class="slide__content">
+                    <img class="img img--full_screen" src="/img/tap4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="/js/App.js"></script>
