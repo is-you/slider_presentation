@@ -23,7 +23,7 @@ function initSlider() {
         }, 2000);
     });
 
-    const panzoom = Panzoom(zoom_el, {contain: 'outside', disableXAxis: false, disableYAxis: false, minScale: 1, startScale: 1.5});
+    const panzoom = Panzoom(zoom_el, {contain: 'outside', disableXAxis: false, disableYAxis: false, minScale: 1});
 
     zoom_el.addEventListener('touchend', handleTouchEnd);
     zoom_el.addEventListener('touchcancel', handleTouchEnd);
