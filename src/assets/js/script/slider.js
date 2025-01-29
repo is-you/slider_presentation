@@ -1,6 +1,6 @@
 function initSlider() {
     const slider_el = document.querySelector('.mySwiper');
-    const zoom_el = document.querySelector('.zoom_wrapper');
+    const zoom_el = document.querySelector('.panzoom');
 
     const swiper = new Swiper(slider_el, {
         allowTouchMove: false,
@@ -23,8 +23,26 @@ function initSlider() {
         }, 2000);
     });
 
-    const panzoom = Panzoom(zoom_el, {contain: 'outside', minScale: 1, startScale: 1.5});
+    const panzoom = Panzoom(zoom_el, {contain: 'outside', disableXAxis: false, disableYAxis: false, minScale: 1, startScale: 1.5});
+
+    zoom_el.addEventListener('touchend', handleTouchEnd);
+    zoom_el.addEventListener('touchcancel', handleTouchEnd);
+
+    function handleTouchEnd(event) {
+        panzoom.reset();
+        console.log('Касание завершено');
+    }
+
     swiper.slideTo(7);
+
+    document.querySelector('.js-set-img-1').addEventListener('click', ()=> {
+        document.querySelector('.js-img-1').style.display = 'block';
+        document.querySelector('.js-img-2').style.display = 'none';
+    });
+    document.querySelector('.js-set-img-2').addEventListener('click', ()=> {
+        document.querySelector('.js-img-2').style.display = 'block';
+        document.querySelector('.js-img-1').style.display = 'none';
+    });
 }
 
 initSlider();
