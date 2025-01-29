@@ -33,7 +33,7 @@ function initSlider() {
         console.log('Касание завершено');
     }
 
-    swiper.slideTo(7);
+    //swiper.slideTo(7);
 
     document.querySelector('.js-set-img-1').addEventListener('click', ()=> {
         document.querySelector('.js-img-1').style.display = 'block';
