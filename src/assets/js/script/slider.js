@@ -1,10 +1,12 @@
 function initSlider() {
     const slider_el = document.querySelector('.mySwiper');
+    const zoom_el = document.querySelector('.zoom_wrapper');
 
     const swiper = new Swiper(slider_el, {
         allowTouchMove: false,
         simulateTouch: false,
     });
+    console.log(zoom_el, Panzoom);
 
     slider_el.addEventListener('click', (e) => {
         const target = e.target;
@@ -21,6 +23,9 @@ function initSlider() {
             swiper.slideTo(slide_index);
         }, 2000);
     });
+
+    const panzoom = Panzoom(zoom_el, {disableXAxis: true, disableYAxis: true});
+    swiper.slideTo(1);
 }
 
 initSlider();
