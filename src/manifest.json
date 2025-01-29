@@ -1,0 +1,15 @@
+{
+  "name": "Presentation",
+  "short_name": "Presentation",
+  "start_url": "/page/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Presentation",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -158,6 +158,11 @@ function libcss(){
 		.pipe(browserSync.stream());
 }
 
+function manifest_copy(){
+	return src('./src/manifest.json')
+		.pipe(dest('./build/'));
+}
+
 function css() {
 	const csso = require('gulp-csso');
 	const groupcss = require('gulp-group-css-media-queries');
@@ -228,7 +233,7 @@ function watch() {
 	gulp.watch(paths.img, img);
 }
 
-gulp.task('build', parallel(css, libcss, js, html, img, fonts));
+gulp.task('build', parallel(css, libcss, js, html, img, fonts,manifest_copy));
 gulp.task('font', fonts);
 gulp.task('css', css);
 gulp.task('img', img);
@@ -236,3 +241,4 @@ gulp.task('js', js);
 gulp.task('html', html);
 gulp.task('default', watch);
 gulp.task('libcss', libcss);
+gulp.task('manifest_copy', manifest_copy);
