@@ -24,7 +24,7 @@ function initSlider() {
         }, 2000);
     });
 
-    const panzoom = Panzoom(zoom_el, {disableXAxis: true, disableYAxis: true});
+    const panzoom = Panzoom(zoom_el, {disableXAxis: true, disableYAxis: true, minZoom: 1});
     swiper.slideTo(1);
 }
 
