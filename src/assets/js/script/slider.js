@@ -11,9 +11,10 @@ function initSlider() {
         const target = e.target;
         if (!target.classList.contains('js-slide-to')) return;
         const slide_index = parseInt(target.dataset.slideTo);
-        if(slide_index === 7) {
+        if (slide_index === 7) {
             document.querySelector('.js-img-1').style.display = 'block';
             document.querySelector('.js-img-2').style.display = 'none';
+            document.querySelector('.js-img-header').src = '/img/tap2-3a.jpg';
         }
         swiper.slideTo(slide_index);
     });
@@ -42,10 +43,12 @@ function initSlider() {
     document.querySelector('.js-set-img-1').addEventListener('click', ()=> {
         document.querySelector('.js-img-1').style.display = 'block';
         document.querySelector('.js-img-2').style.display = 'none';
+        document.querySelector('.js-img-header').src = '/img/tap2-3a.jpg';
     });
     document.querySelector('.js-set-img-2').addEventListener('click', ()=> {
         document.querySelector('.js-img-2').style.display = 'block';
         document.querySelector('.js-img-1').style.display = 'none';
+        document.querySelector('.js-img-header').src = '/img/tap2-3c.jpg';
     });
 }
 
