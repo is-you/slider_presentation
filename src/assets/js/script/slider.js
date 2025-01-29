@@ -11,6 +11,10 @@ function initSlider() {
         const target = e.target;
         if (!target.classList.contains('js-slide-to')) return;
         const slide_index = parseInt(target.dataset.slideTo);
+        if(slide_index === 7) {
+            document.querySelector('.js-img-1').style.display = 'block';
+            document.querySelector('.js-img-2').style.display = 'none';
+        }
         swiper.slideTo(slide_index);
     });
 
