@@ -23,8 +23,8 @@ function initSlider() {
         }, 2000);
     });
 
-    const panzoom = Panzoom(zoom_el, {disableXAxis: true, disableYAxis: true, minScale: 1});
-    swiper.slideTo(1);
+    const panzoom = Panzoom(zoom_el, {contain: 'outside', minScale: 1, startScale: 1.5});
+    swiper.slideTo(7);
 }
 
 initSlider();
