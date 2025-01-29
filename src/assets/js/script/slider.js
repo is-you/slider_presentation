@@ -6,7 +6,6 @@ function initSlider() {
         allowTouchMove: false,
         simulateTouch: false,
     });
-    console.log(zoom_el, Panzoom);
 
     slider_el.addEventListener('click', (e) => {
         const target = e.target;
@@ -24,7 +23,7 @@ function initSlider() {
         }, 2000);
     });
 
-    const panzoom = Panzoom(zoom_el, {disableXAxis: true, disableYAxis: true, minZoom: 1});
+    const panzoom = Panzoom(zoom_el, {disableXAxis: true, disableYAxis: true, minScale: 1});
     swiper.slideTo(1);
 }
 
