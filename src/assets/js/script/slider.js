@@ -14,7 +14,8 @@ function initSlider() {
         if (slide_index === 7) {
             document.querySelector('.js-img-1').style.display = 'block';
             document.querySelector('.js-img-2').style.display = 'none';
-            document.querySelector('.js-img-header').src = '/img/tap2-3a.jpg';
+            document.querySelector('.js-img-header').src = '/fksp/img/tap2-3a.jpg';
+            document.querySelector('.js-img-footer').src = '/fksp/img/tap2-3b.jpg';
         }
         swiper.slideTo(slide_index);
     });
@@ -40,15 +41,18 @@ function initSlider() {
 
     swiper.slideTo(1);
 
+
     document.querySelector('.js-set-img-1').addEventListener('click', ()=> {
         document.querySelector('.js-img-1').style.display = 'block';
         document.querySelector('.js-img-2').style.display = 'none';
-        document.querySelector('.js-img-header').src = '/img/tap2-3a.jpg';
+        document.querySelector('.js-img-header').src = '/fksp/img/tap2-3a.jpg';
+        document.querySelector('.js-img-footer').src = '/fksp/img/tap2-3b.jpg';
     });
     document.querySelector('.js-set-img-2').addEventListener('click', ()=> {
         document.querySelector('.js-img-2').style.display = 'block';
         document.querySelector('.js-img-1').style.display = 'none';
-        document.querySelector('.js-img-header').src = '/img/tap2-3c.jpg';
+        document.querySelector('.js-img-header').src = '/fksp/img/tap2-3c.jpg';
+        document.querySelector('.js-img-footer').src = '/fksp/img/tap2-3d.jpg';
     });
 }
 
